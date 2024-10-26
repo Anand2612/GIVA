@@ -25,7 +25,7 @@ function ProductManagement() {
       const data = await res.json();
       setProducts(Array.isArray(data) ? data : []);
     } catch (err) {
-      console.error('Fetch error:', err);
+      console.error('Fetch error:', err); // Improved error logging
       setError('Failed to fetch products');
       setProducts([]);
     } finally {
